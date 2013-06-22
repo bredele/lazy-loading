@@ -1,0 +1,14 @@
+{
+  "name": "lazy",
+  "repo": "bredele/lazy",
+  "description": "A simple lazy loading component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
