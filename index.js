@@ -32,6 +32,7 @@ function ready(script, callback){
       }
     };
   } else {
+    script.async = false;
     script.onload = function(){
       callback();
     };
@@ -70,9 +71,9 @@ function resolve(path) {
  * @api private
  */
 
-require.normalize = function(path, host) {
-
-};
+function normalize(path, host) {
+  //do something
+}
 
 
 /**
