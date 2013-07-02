@@ -11,7 +11,7 @@ module.exports = Lazy;
  */
 
 function Lazy() {
-
+  this.head = document.getElementsByTagName("head")[0];
 }
 
 
@@ -87,7 +87,7 @@ Lazy.prototype.load = function(url, callback) {
   script.type = "text/javascript";
   ready(script, callback);
   script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
+  this.head.appendChild(script);
 };
 
 
