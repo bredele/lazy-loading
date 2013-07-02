@@ -11,12 +11,14 @@ module.exports = Lazy;
  */
 
 function Lazy() {
+  //cache
   this.head = document.getElementsByTagName("head")[0];
 }
 
 
 /**
  * Execute callback when script loaded.
+ * 
  * @param  {Element}   script  
  * @param  {Function} callback
  * @api private
@@ -78,6 +80,7 @@ function normalize(path, host) {
 
 /**
  * Load a script without its dependencies
+ * 
  * @param  {String} url 
  * @param {Function} callback function
  */
