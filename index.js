@@ -1,21 +1,4 @@
 /**
- * Expose 'Lazy'
- */
-
-module.exports = Lazy;
-
-
-/**
- * Initialize Lazy
- *
- */
-
-function Lazy() {
-
-}
-
-
-/**
  * Execute callback when script loaded.
  * @param  {Element}   script  
  * @param  {Function} callback
@@ -40,48 +23,16 @@ function ready(script, callback){
 
 
 /**
- * Resolve `path`.
- *
- * Lookup:
- *
- *   - PATH/index.js
- *   - PATH.js
- *   - PATH
- *
- * @param {String} path
- * @return {String} path or null
- * @api private
- */
-
-
-function resolve(path) {
-  //do something
-  //if(!require.resolve(path)){
-  //}
-}
-
-
-/**
- * Normalize `path` relative to the host name.
- *
- * @param {String} path
- * @param {String} host optional
- * @return {String}
- * @api private
- */
-
-require.normalize = function(path, host) {
-
-};
-
-
-/**
  * Load a script without its dependencies
  * @param  {String} url 
  * @param {Function} callback function
  */
 
-Lazy.prototype.load = function(url, callback) {
+/**
+ * Expose 'Lazy'
+ */
+
+module.exports.load = function(url, callback) {
   var script = document.createElement("script");
   script.type = "text/javascript";
   ready(script, callback);
