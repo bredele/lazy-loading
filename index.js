@@ -33,7 +33,7 @@ function ready(script, callback){
  * @param {Function} callback function
  */
 
-module.exports.load = function(url, callback) {
+module.exports = function(url, callback) {
   var script = document.createElement("script");
   script.type = "text/javascript";
   ready(script, callback);
