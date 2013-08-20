@@ -1,5 +1,8 @@
+
+
 /**
  * Execute callback when script loaded.
+ * 
  * @param  {Element}   script  
  * @param  {Function} callback
  * @api private
@@ -15,6 +18,7 @@ function ready(script, callback){
       }
     };
   } else {
+    script.async = false;
     script.onload = function(){
       callback();
     };
@@ -24,12 +28,9 @@ function ready(script, callback){
 
 /**
  * Load a script without its dependencies
+ * 
  * @param  {String} url 
  * @param {Function} callback function
- */
-
-/**
- * Expose 'Lazy'
  */
 
 module.exports.load = function(url, callback) {
